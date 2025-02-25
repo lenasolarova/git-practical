@@ -25,18 +25,18 @@ git status
 
 # See what is stashed in this repository
 $ git stash list
-stash@{0}: On master: experimental work with hello.txt
+stash@{0}: On main: experimental work with hello.txt
 ```
 Now make another change to _hello.txt_ before moving on to the next section
 ```bash
 # We want to stash your last change, check the status and our stash list
 $ git stash
 $ git status
-On branch master
+On branch main
 nothing to commit, working tree clean
 $ git stash list
-stash@{0}: WIP on master: 21954be rerge branch 'favourite-show'
-stash@{1}: On master: experimental work with hello.txt
+stash@{0}: WIP on main: 21954be rerge branch 'favourite-show'
+stash@{1}: On main: experimental work with hello.txt
 
 # Restore top/first stash (stash@{0}) & remove it from the list
 $ git stash pop # == apply && drop

@@ -14,7 +14,7 @@ Why rewrite history?
 Rebasing and Merging are two methods that achieve the same goal - the integration of changes from one branch into another branch
 
 
-![rebase on master](img/01.gif)
+![rebase on main](img/01.gif)
 ![rebase on feature](img/02.gif)
 
 ## Prerequisites
@@ -34,8 +34,8 @@ git clone git@github.com:<github_username>/git-tutorial.git
 git fetch
 git checkout rebase
 
-# The rebase branch was branched from master a while ago
-# It's out of date (master has moved on)
+# The rebase branch was branched from main a while ago
+# It's out of date (main has moved on)
 # And there's bad commits in our history that we're going to fixup
 git log --pretty=oneline
 
@@ -45,11 +45,11 @@ git rebase -i HEAD~4 # Note the lack of a branch
 # Fix up the commits - think about re-ordering or (s)quashing
 # the version bumps and (r)eword the commit messages. 
 # Also, delete commits that are of no value
-git rebase origin/master
+git rebase origin/main
 
 # Alternatively:
 # We can do both a history rewrite and a rebase via:
-git rebase -i origin/master
+git rebase -i origin/main
 ```
 
 # Next Section

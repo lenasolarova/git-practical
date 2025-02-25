@@ -4,24 +4,24 @@ In the last section, we learned about creating new branches. Often branches are
 created temporarily to work on a specific piece of work. When that work is
 ready, then those changes are brought back into the main line again.
 
-Remember the branches from the last section? Originally there was the master
+Remember the branches from the last section? Originally there was the main
 branch, and then we created a branch called 'favourite-animal', where we made
-changes. We can now merge those changes back into master branch, and delete the
+changes. We can now merge those changes back into main branch, and delete the
 'my-new-branch' since we won't need it anymore.
 
 ## Practical One - Fast-forward merging
 
 The simplest form of merging is *fast-forward* merging. Since branches are just
-references to commits, and 'favourite-animal' is a direct descendant of master;
-we can just update master to point to the same commit as 'favourite-animal'.
+references to commits, and 'favourite-animal' is a direct descendant of main;
+we can just update main to point to the same commit as 'favourite-animal'.
 
 This is the default way that git will merge when the target branch is an
-ancestor of the source branch. First, `checkout` the target branch (master in
+ancestor of the source branch. First, `checkout` the target branch (main in
 this case), and then use the `merge` subcommand to bring the changes from the
 source branch (favourite-animal) into this branch:
 
 ```bash
-git checkout master
+git checkout main
 
 git merge favourite-animal
 ```
@@ -42,7 +42,7 @@ message.
 
 ![Before creating a merge commit](./img/basic-merging-before.png)
 
-While on the master branch, we can now merge the changes from the
+While on the main branch, we can now merge the changes from the
 'favourite-show' branch as follows:
 
 ``` bash

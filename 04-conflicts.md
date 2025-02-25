@@ -15,7 +15,7 @@ the action, and asks you to intervene.
 First, let's make a new branch and add a file:
 
 ``` bash
-git checkout -b left master
+git checkout -b left main
 
 echo "Left is the best" > conflict.txt
 
@@ -27,7 +27,7 @@ Next, for the purposes of demonstration, let's create another branch,
 called `right`:
 
 ```bash
-git checkout -b right master
+git checkout -b right main
 
 echo "Right is the best" > conflict.txt
 git add conflict.txt

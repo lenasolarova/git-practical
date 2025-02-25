@@ -28,9 +28,9 @@ $ tree -L 1 ./.git
 `COMMIT_EDITMSG` can be useful with the hub command to create a pull-request on github with a single command
 
 ```bash
-# Create a PR against master branch of the repo in the feedhenry org
+# Create a PR against main branch of the repo in the feedhenry org
 # with the contents of the most recent commit message as the description
-git pull-request -b feedhenry:master -F ./.git/COMMIT_EDITMSG
+git pull-request -b feedhenry:main -F ./.git/COMMIT_EDITMSG
 ```
 
 ## Git objects - what are they?
@@ -70,8 +70,8 @@ Porcelain provides a more user-friendly interface to the plumbing
 https://git.io/v1Bt5
 
 ```bash
-# Create a new branch from master & checkout
-git co -b ungit master
+# Create a new branch from main & checkout
+git co -b ungit main
 
 # Make a new blob object
 blob_sha1=$(echo "Let's ungit" | git hash-object -w --stdin)
@@ -103,10 +103,10 @@ c838b24 HEAD@{1}: merge c838b2447de706f53eaabed16c371abbb6d82b03: Fast-forward
 e29b7ee HEAD@{2}: checkout: moving from cp-conflict-example to ungit
 bf196ea HEAD@{3}: commit (cherry-pick): Bumping version to 2.0.8
 e29b7ee HEAD@{4}: checkout: moving from cp-example to cp-conflict-example
-b2d9004 HEAD@{5}: checkout: moving from master to cp-example
-e29b7ee HEAD@{6}: checkout: moving from cp-example to master
+b2d9004 HEAD@{5}: checkout: moving from main to cp-example
+e29b7ee HEAD@{6}: checkout: moving from cp-example to main
 b2d9004 HEAD@{7}: cherry-pick: name change
-e29b7ee HEAD@{8}: checkout: moving from master to cp-example
+e29b7ee HEAD@{8}: checkout: moving from main to cp-example
 e29b7ee HEAD@{9}: clone: from git@github.com:fheng/git-tutorial.git
 
 # Checkout a previous state

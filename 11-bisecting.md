@@ -11,7 +11,7 @@ In the `git-tutorial` repo:
 
 ```bash
 git checkout bisect
-# Our bisect branch is a little ahead of of master (500 commits)
+# Our bisect branch is a little ahead of of main (500 commits)
 # At some point, a commit slipped in that means our app doesn't start
 # and our tests fail.
 # Lets use git bisect to find the broken commit

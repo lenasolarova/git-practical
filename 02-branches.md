@@ -4,19 +4,19 @@ A branch is just a reference to a commit, it has a human-readable name
 and identifier. Instead of using the SHA-1 hash to reference a commit we can
 now use the name of a branch.
 
-When creating a repository using `git init` a branch named 'master' is created
+When creating a repository using `git init` a branch named 'main' is created
 for us, it is currently pointed at our latest commit.
 
 ![The current state of our repository](./img/basic-branch.png)
 
-Let's designate 'master' as the branch for our main line of development,
+Let's designate 'main' as the branch for our main line of development,
 anything on that branch should be stable. If we want to test out new features
 without breaking the main line then we can create new branches.
 
 ## Practical One
 
 We want to add a new file to our current project, but we don't want to mess up
-'master'.
+'main'.
 
 #### View the current branches
 
@@ -24,10 +24,10 @@ We can see all of the branches in our repository.
 
 ```bash
 git branch
-# stdout: master
+# stdout: main
 ```
 
-#### Create a new branch from master
+#### Create a new branch from main
 
 To add our new feature we want to add a new branch. Our new feature is adding
 information about our favourite animal so let's call the branch something
@@ -36,7 +36,7 @@ descriptive like 'favourite-animal'.
 ```bash
 git branch favourite-animal
 # If we do a 'git branch' now we'll see our new branch is created, but we're
-# still on master. Let's 'checkout' our new branch.
+# still on main. Let's 'checkout' our new branch.
 
 git checkout favourite-animal
 ```
@@ -87,13 +87,13 @@ cat .git/HEAD
 ## Practical Two
 
 We have created a branch that has information about our favourite animal. Now
-let's create another branch from master and add information about our favourite
+let's create another branch from main and add information about our favourite
 TV show. We are currently on the branch 'favourite-animal'. We need to create
-our new branch from master.
+our new branch from main.
 
 ```bash
-# Create a new branch named favourite-show from the branch master
-git branch favourite-show master
+# Create a new branch named favourite-show from the branch main
+git branch favourite-show main
 git checkout favourite-show
 ```
 

@@ -2,7 +2,7 @@
 
 Apply the changes introduced by some existing commits
 
-Our main use-case for git-cherry-pick is for taking some bugfix commits from one branch, and applying them to another (e.g. a release branch and master)
+Our main use-case for git-cherry-pick is for taking some bugfix commits from one branch, and applying them to another (e.g. a release branch and main)
 
 ## Prerequisite
 Ensure your current directory is that of the cloned repository in the previous practical.
